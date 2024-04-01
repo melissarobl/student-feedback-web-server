@@ -1,0 +1,52 @@
+<div class="text-center header bg-info-subtle mb-4 p-3 rounded-3">
+    <h1>Please provide feedback. You may do so anonymously.</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <h2>Instructions</h2>
+        <p>As one of our students, your thoughts, feedback and comments are important to us.</p>
+        <p>Please send them using this form.</p>
+        <p>If you would like us to follow up with you, include your contact information.</p>
+
+    </div>
+
+    <div class="col-md-7">
+        <form action="/submit-feedback" method="POST">
+            <!-- 'for' associates name label with name input. Allows screen readers to know where input is related.
+            Can also click on label to get to corresponding input box. -->
+            <label class="form-label" for="student-name">Name:</label>
+            <input class="form-control" id="student-name" name="student-name" type="text">
+
+            <br>
+
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-control" id="email" name="student-email" type="email">
+
+            <br>
+
+            <label class="form-label" for="comments">Comments:</label>
+            <br>
+            <textarea class="form-control" id="comments" name="comments" required></textarea>
+
+            <p class="m-2">Are you a current student?</p>
+
+            <div class="form-check">
+                <label class="form-check-label" for="yes">Yes</label>  <!--using label for lets user click on label to select the input element -->
+                <input class="form-check-input" name="current-student" id="yes" type="radio" value="yes" checked>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label"  for="no">No</label>
+                <input class="form-check-input" name="current-student" id="no" type="radio" value="no">
+                <!-- Same name means they both represent the same data, so browser knows they should not both be selected. -->
+            </div>
+
+            <br>
+
+            <!-- Displays a button, and when the button is clicked, submit the form  -->
+            <input class="btn btn-primary"  type="submit">
+        </form>
+
+    </div>
+</div> <!-- end of the row div that contains both columns -->
